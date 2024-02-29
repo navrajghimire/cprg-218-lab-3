@@ -1,0 +1,107 @@
+
+/* Body styles + bg colour */
+body {
+  background-color: rgb(2, 68, 2);
+  font-family: "Comic Neue", cursive;
+  font-style: italic;
+  color: rgb(144, 0, 255);
+}
+
+/* green box behind the HERBIVOROUS ANIMALS */
+.header-content {
+  font-family: "Bungee Spice", sans-serif;
+  display: inline-block;
+  background-color: rgb(2, 43, 7);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/* HERBIVOROUS ANIMALS*/
+.header-content h1 { 
+  font-family: "Bungee Spice", sans-serif;
+}
+
+/* An informative page for pre-primary students*/
+.header-content h2 { 
+  font-family: "Roboto Mono", system-ui;
+  color: rgb(30, 255, 0);
+
+}
+
+.card-container {
+  list-style-type: none;
+  justify-items: center;
+  gap: 1rem;
+}
+
+
+.card {
+  width: 150%;
+}
+
+/* background colour behind descripton of animals*/
+.card-content {
+  background-color: rgb(202, 254, 202);
+}
+
+.card img {
+  width: 100%; /* width of images */
+}
+
+/* Descripton of animals*/
+.paragraph {
+  font-family: "Comic Neue", cursive;
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+}
+
+/* Mobile (max-width: 768px): 1 × 9 (full width cards) */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Tablet (min-width: 768px): 2 × 4 (50% width cards, last card is full width) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: calc(50% - 10px);
+  }
+
+  .card:nth-child(9) {
+    width: calc(10% - 10px);
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Desktop (min-width: 1200px): 3 × 3 (33% width cards) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: calc(33.33% - 10px); 
+  }
+
+  .card:nth-child(9) {
+    width: calc(33.33% + 33%);
+    grid-column: auto;
+  }
+}
+
+/* size of the video */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 384px;
+  height: 200px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+

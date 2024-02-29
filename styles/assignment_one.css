@@ -1,0 +1,77 @@
+/* Mobile (max-width: 768px): 1 × 9 (full width cards) */
+@media only screen and (max-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  .card {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+}
+
+
+
+
+/* Tablet (min-width: 768px): 2 × 4 (50% width cards, last card is full width) */
+@media only screen and (min-width: 768px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 20px;
+  }
+  
+  .card {
+    width: calc(50% - 10px);
+  }
+  
+  .card:nth-child(9) {
+    width: calc(100% - 10px);
+    grid-column: 1 / span 2;
+  }
+}
+
+
+
+/* Desktop (min-width: 1200px): 3 × 3 (33% width cards) */
+@media only screen and (min-width: 1200px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .card:nth-child(9) {
+    width: calc(33.33% + 33%); /* to adjust monkey image size */
+    grid-column: auto; 
+  }
+}
+
+
+
+
+
+.subheader {
+  color: grey;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-container {
+  text-align: center;
+}
+
+.card-container > * {
+  margin-bottom: 10px;
+}
+
+
